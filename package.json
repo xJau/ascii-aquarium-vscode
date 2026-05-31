@@ -2,7 +2,7 @@
   "name": "ascii-aquarium",
   "displayName": "ASCII Aquarium",
   "description": "A live animated ASCII aquarium — TypeScript port of asciiquarium.",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "license": "GPL-2.0-only",
   "publisher": "ascii-aquarium",
   "engines": {
