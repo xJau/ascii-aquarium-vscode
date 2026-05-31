@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "license": "GPL-2.0-only",
   "publisher": "ascii-aquarium",
+  "icon": "media/icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
