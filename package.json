@@ -1,0 +1,82 @@
+{
+  "name": "ascii-aquarium",
+  "displayName": "ASCII Aquarium",
+  "description": "A live animated ASCII aquarium — TypeScript port of asciiquarium.",
+  "version": "0.2.3",
+  "license": "GPL-2.0-only",
+  "publisher": "ascii-aquarium",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xJau/ASCII-Aquarium"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "asciiAquarium.toggle",
+        "title": "ASCII Aquarium: Toggle"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "asciiAquarium.view",
+          "name": "ASCII Aquarium",
+          "icon": "$(symbol-misc)"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "ASCII Aquarium",
+      "properties": {
+        "asciiAquarium.targetFps": {
+          "type": "number",
+          "default": 16,
+          "minimum": 4,
+          "maximum": 60
+        },
+        "asciiAquarium.enabledEvents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "shark",
+            "whale",
+            "ship",
+            "bigFish",
+            "monster"
+          ]
+        },
+        "asciiAquarium.feedEnabled": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build:ext": "tsc -p ./",
+    "build:web": "node esbuild.mjs",
+    "build": "npm run build:ext && npm run build:web",
+    "test": "vitest run",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  }
+}

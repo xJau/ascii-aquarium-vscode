@@ -1,0 +1,9 @@
+html, body { margin: 0; height: 100%; background: #001a2a; overflow: hidden; }
+#toolbar { position: fixed; top: 4px; right: 8px; opacity: .25; transition: opacity .2s; }
+#toolbar:hover { opacity: 1; }
+#toolbar button { background: #013; color: #cff; border: 1px solid #035; cursor: pointer; }
+#tank {
+  margin: 0; padding: 4px; line-height: 1.0; white-space: pre;
+  font-family: "Menlo", "Consolas", monospace; font-size: 14px; color: #aaa;
+}
+#tank span { white-space: pre; }
